@@ -1,0 +1,168 @@
+/* 
+    CSS DE UN FORMULARIO
+    Autor: Diana Chacón Ocariz
+*/
+
+* {
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+}
+
+body {    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: brown;
+    background: rgb(254,226,65);
+}
+
+/* 
+    Crea un fondo utilizando una imagen y un gradiente por encima
+    Esto crea un efecto de opacidad del fondo
+ */
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1; /* -1 envía el objeto al fondo (pensar en capas) */
+    /* Crea un fondo con una imagen y un filtro que opaca la imagen con un gradiente */
+    background-image: linear-gradient(
+      120deg,
+      rgba(254,226,65,0.4),
+      rgba(172, 147, 10, 0.6)
+    ),
+    url(../image/background-image.jpg);
+    /* 
+        Crea un fondo con una imagen y se le agrega opacidad
+        sin efecto gradiente
+     */
+    /* background: url(../image/background-image.jpg);
+    opacity: 0.5; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* posiciona la imagen siempre abajo y a la derecha */
+    background-position: right bottom; 
+}
+
+/* Ocupa solo el 70% de la pantalla */
+#survey-form {
+	width: 70%;
+	padding: 2%;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.5ch; /* Espaciado de 0.5 caracteres */
+    margin-bottom: 3%;
+}
+
+.description {
+    font-size: 1rem;
+    padding: 2%;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 2%;
+	font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 95%;
+    margin-bottom: 3%;
+	padding:2%;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+    background-color:  blanchedalmond;
+    font-size: 1rem;
+    color: rgb(70, 70, 70);
+}
+
+#dropdown {
+    width: 100%;
+}
+
+.sex, 
+.meals {
+    margin-bottom: 3%;
+}
+
+.sex-item, 
+.meals-item {
+    margin-left: 5%;
+    margin-bottom: -1.5%;
+}
+
+.sex-item label,
+.meals-item label {
+    margin-left: 1%;
+}
+
+textarea{
+    display:block;
+	width: 100%;
+    height: 100px;
+    margin: 8px 0;
+	resize: both;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+    background-color: blanchedalmond;		
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(70, 70, 70);
+    font-size: 1rem;
+}
+
+button {
+    position: relative;
+    padding: 1%;
+	margin-top: 3%;
+	width: 8ch; /* 8 caracteres de ancho */
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:  brown;
+    /* font-weight: bold; */
+    font-size: 0.8rem;
+    color: blanchedalmond;
+} 
+
+button:hover {
+	cursor:pointer;
+}
+
+footer {
+    background-color:  brown;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 100%;
+    padding: 1%;
+}
+
+footer a {
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+/* 
+    Cambia el tamaño de las letras en función del tamaño
+    de la pantalla, para tener un diseño responsive y
+    una mejor experiencia usuario
+*/
+
+@media only screen and (min-width: 800px) {
+    * {
+        font-size: x-large;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    * {
+        font-size: larger;
+    }
+}
