@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de Inscripción</title>
+    
+    <!-- 
+        EJEMPLO DE FORMULARIO
+        Con validación de los campos y diseño responsive
+        Únicamente HTML y CSS
+
+        Autor: Diana Chacón Ocariz
+     -->
+
+    <!-- Incluyendo CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+                <h1 id="title" class="title">
+                    Formulario de Inscripción
+                    <br>
+                    Curso de Cocina para Niños y Adolescentes
+                </h1>      
+
+                <p id="description" class="description">
+                    Completa este formulario para inscribirte en el 
+                    <strong>Curso de Cocina para Niños y Adolescentes. </strong>
+                    <br>
+                    Debes tener entre 7 y 15 años de edad. Los campos con un <strong>'*'</strong> son obligatorios.
+                </p>
+
+        </header>
+
+        <form action="post" id="survey-form">
+
+            <!-- 
+                Se utilizan las propiedades de los controles
+                para validar el formato y la obligatoriedad
+             -->
+
+            <div>
+                <label for="name" id="name-label">Nombre *</label>
+                <input type="text" id="name" placeholder="Nombre completo" required>
+            </div>
+
+            <div>
+                <label for="name" id="email-label">eMail *</label>
+                <input type="email" id="name" placeholder="eMail válido" required>
+            </div>
+
+            <div>
+                <label for="number" id="number-label">Edad *</label>
+                <input type="number" min=7 max=15 id="number" placeholder="Edad entre 7 y 15" required>
+            </div>
+
+            <div class="sex">
+                <label for="sex">Selecciona tu sexo:</label>
+
+                <div class="sex-item">
+                    <input type="radio" name="sex" id="femenino" value="F">
+                    <label for="femenino">Femenino</label>
+                </div>
+                <div class="sex-item">
+                    <input type="radio" name="sex" id="masculino" value="M">
+                    <label for="masculino">Masculino</label>
+                </div>
+            </div>
+        
+            <div>
+                <label for="dropdown" id="dropdown-label">Grado de estudios *</label>
+                <select name="grade" id="dropdown" required>
+                    <option value="">- Selecciona uno -</option>
+                    <option value="Primaria">Primaria</option>
+                    <option value="Secundaria">Secundaria</option>
+                    <option value="NoEstudia">No estudia</option>
+                </select>
+            </div>
+
+            <div class="meals">
+                <label for="meals">Selecciona tus comidas favoritas:</label>
+                
+                <div class="meals-item">
+                    <input type="checkbox" name="meals" id="postres" value="postres">
+                    <label for="postres">Postres</label>
+                </div>
+                    
+                <div class="meals-item">
+                    <input type="checkbox" name="meals" id="ensaladas" value="ensaladas">
+                    <label for="ensaladas">Ensaladas</label>
+                </div>
+                    
+                <div class="meals-item">
+                    <input type="checkbox" name="meals" id="salados" value="salados">
+                    <label for="ensaladas">Platos salados</label>
+                </div>
+               
+            </div>
+
+            <div>
+                <label for="comment" id="comment-label">Agrega un comentario, si deseas:</label>
+                <textarea name="comment" id="comment" rows="10"></textarea>
+            </div>
+        
+            <button type="submit" id="submit" class="submit">Enviar</button>
+
+        </form>
+
+        <footer>
+            <a href="https://www.freepik.com/photos/food" target="_blank">Food photo created by mdjaff - www.freepik.com</a>
+        </footer>
+    </div>
+
+</body>
+</html>
