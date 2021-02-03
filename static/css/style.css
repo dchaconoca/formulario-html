@@ -127,7 +127,7 @@ button {
 	border:1px solid #f6f6f6;
 	border-radius:3px;
 	background-color:  brown;
-    /* font-weight: bold; */
+    font-weight: bold;
     font-size: 0.8rem;
     color: blanchedalmond;
 } 
